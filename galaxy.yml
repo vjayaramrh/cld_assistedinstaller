@@ -1,0 +1,20 @@
+---
+# Ansible Galaxy collection metadata
+namespace: vjayaramrh
+name: cld_assistedinstaller
+version: 1.0.0
+readme: README.md
+authors:
+  - Vishwanath Jayaraman (vjayaramrh@github.com)
+description: Ansible collection for OpenShift Assisted Installer API
+license:
+  - MIT
+tags:
+  - openshift
+  - assisted_installer
+  - cloud
+  - infrastructure
+repository: https://github.com/vjayaramrh/cld_assistedinstaller
+documentation: https://github.com/vjayaramrh/cld_assistedinstaller/blob/main/README.md
+homepage: https://github.com/vjayaramrh/cld_assistedinstaller
+issues: https://github.com/vjayaramrh/cld_assistedinstaller/issues

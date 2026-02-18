@@ -1,23 +1,103 @@
 # cld_assistedinstaller
 
-Ansible collection for the OpenShift Assisted Installer API - A beginner-friendly learning resource for Ansible module development.
+Ansible collection for the OpenShift Assisted Installer API - designed for beginners learning Ansible module development.
 
-## Status
+## 🎓 For First-Time Ansible Module Developers
 
-🚧 **Under Development** - This repository is being built incrementally through Pull Requests to demonstrate proper development workflow.
+**New to Ansible modules?** You're in the right place! This repository is specifically designed to help you learn.
 
-## Purpose
+### Start Here (Available Now):
+1. 📖 **[PROJECT_REQUIREMENTS.md](PROJECT_REQUIREMENTS.md)** - Project goals and requirements
+2. 📖 **[IMPLEMENTATION_PLAN.md](IMPLEMENTATION_PLAN.md)** - Our phased approach
+3. 📁 **[docs/CONFIGURATION_FILES_EXPLAINED.md](docs/CONFIGURATION_FILES_EXPLAINED.md)** - Why each config file is needed
+4. 🔧 **[docs/GIT_COMMIT_STRATEGY.md](docs/GIT_COMMIT_STRATEGY.md)** - How we organize commits
+5. 🔄 **[docs/PULL_REQUEST_WORKFLOW.md](docs/PULL_REQUEST_WORKFLOW.md)** - How we use Pull Requests
+6. 🧪 **[docs/TESTING_APPROACH.md](docs/TESTING_APPROACH.md)** - Modern testing strategy
 
-This project is designed to teach beginners how to:
-- Write Ansible modules
-- Follow proper Git workflow with Pull Requests
-- Structure an Ansible collection
-- Write tests and documentation
+### Coming in Future Phases:
+- 📚 docs/BEGINNERS_GUIDE.md - Introduction to Ansible modules (Phase 6)
+- 🛠️ docs/MODULE_DEVELOPMENT_WALKTHROUGH.md - Step-by-step tutorial (Phase 7)
+- 📋 docs/LEARNING_PATH.md - Guided learning sequence (Phase 7)
+- 📝 docs/QUICK_REFERENCE.md - Commands cheat sheet (Phase 6)
 
-## Getting Started
+## Overview
 
-Check the Pull Requests to see the development progress and learn from the incremental changes.
+This collection provides Ansible modules for interacting with the OpenShift Assisted Installer API. Currently includes:
 
-## Repository
+- **events** - Retrieve cluster events
 
-https://github.com/vjayaramrh/cld_assistedinstaller
+## Prerequisites
+
+- Python 3.6 or higher
+- Ansible 2.9 or higher
+- Red Hat account with console.redhat.com access
+- Offline token from https://console.redhat.com/openshift/token
+
+## Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/vjayaramrh/cld_assistedinstaller.git
+cd cld_assistedinstaller
+
+# Install Python dependencies
+pip install -r plugins/requirements.txt
+
+# Set up authentication (choose one)
+export AI_OFFLINE_TOKEN="your-offline-token-here"
+# OR
+export AI_API_TOKEN="your-api-token-here"
+```
+
+### Getting Your Offline Token
+
+1. Visit https://console.redhat.com/openshift/token
+2. Log in with your Red Hat account
+3. Click "Load token"
+4. Copy the offline token
+5. Export it: `export AI_OFFLINE_TOKEN="your-token"`
+
+## Quick Start
+
+```yaml
+---
+- name: Get cluster events
+  hosts: localhost
+  tasks:
+    - name: List all events
+      events:
+      register: result
+
+    - name: Display events
+      debug:
+        var: result.cluster_events
+```
+
+Run the playbook:
+```bash
+ansible-playbook examples/events.yml
+```
+
+## Documentation
+
+### For Beginners
+- [IMPLEMENTATION_PLAN.md](IMPLEMENTATION_PLAN.md) - How we planned and built this project
+- [CONFIGURATION_FILES_EXPLAINED.md](docs/CONFIGURATION_FILES_EXPLAINED.md) - Why each config file exists
+- [PULL_REQUEST_WORKFLOW.md](docs/PULL_REQUEST_WORKFLOW.md) - How we use Pull Requests
+- [GIT_COMMIT_STRATEGY.md](docs/GIT_COMMIT_STRATEGY.md) - How we organize commits
+
+### Technical Documentation
+- [TESTING_APPROACH.md](docs/TESTING_APPROACH.md) - Modern testing strategy
+
+## License
+
+MIT License - see [LICENSE](LICENSE) for details.
+
+## Support
+
+- 📖 Check the [documentation](docs/)
+- 🐛 Report issues: https://github.com/vjayaramrh/cld_assistedinstaller/issues
+
+## Acknowledgments
+
+This project was created as a learning resource for Ansible module development.
