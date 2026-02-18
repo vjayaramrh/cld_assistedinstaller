@@ -6,15 +6,19 @@ Ansible collection for the OpenShift Assisted Installer API - designed for begin
 
 **New to Ansible modules?** You're in the right place! This repository is specifically designed to help you learn.
 
-### Start Here:
-1. 📖 **[IMPLEMENTATION_PLAN.md](IMPLEMENTATION_PLAN.md)** - Understand our approach and planning process
-2. 📁 **[docs/CONFIGURATION_FILES_EXPLAINED.md](docs/CONFIGURATION_FILES_EXPLAINED.md)** - Why each config file is needed
-3. 📚 **[docs/BEGINNERS_GUIDE.md](docs/BEGINNERS_GUIDE.md)** - Introduction to Ansible modules
-4. 🛠️ **[docs/MODULE_DEVELOPMENT_WALKTHROUGH.md](docs/MODULE_DEVELOPMENT_WALKTHROUGH.md)** - Step-by-step implementation tutorial
-5. 📋 **[docs/LEARNING_PATH.md](docs/LEARNING_PATH.md)** - Guided learning sequence
+### Start Here (Available Now):
+1. 📖 **[PROJECT_REQUIREMENTS.md](PROJECT_REQUIREMENTS.md)** - Project goals and requirements
+2. 📖 **[IMPLEMENTATION_PLAN.md](IMPLEMENTATION_PLAN.md)** - Our phased approach
+3. 📁 **[docs/CONFIGURATION_FILES_EXPLAINED.md](docs/CONFIGURATION_FILES_EXPLAINED.md)** - Why each config file is needed
+4. 🔧 **[docs/GIT_COMMIT_STRATEGY.md](docs/GIT_COMMIT_STRATEGY.md)** - How we organize commits
+5. 🔄 **[docs/PULL_REQUEST_WORKFLOW.md](docs/PULL_REQUEST_WORKFLOW.md)** - How we use Pull Requests
+6. 🧪 **[docs/TESTING_APPROACH.md](docs/TESTING_APPROACH.md)** - Modern testing strategy
 
-### Quick Reference:
-- 📝 **[docs/QUICK_REFERENCE.md](docs/QUICK_REFERENCE.md)** - Commands and common tasks
+### Coming in Future Phases:
+- 📚 docs/BEGINNERS_GUIDE.md - Introduction to Ansible modules (Phase 6)
+- 🛠️ docs/MODULE_DEVELOPMENT_WALKTHROUGH.md - Step-by-step tutorial (Phase 7)
+- 📋 docs/LEARNING_PATH.md - Guided learning sequence (Phase 7)
+- 📝 docs/QUICK_REFERENCE.md - Commands cheat sheet (Phase 6)
 
 ## Overview
 
